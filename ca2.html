@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campus Safety Portal</title>
+    <link rel="stylesheet" href="caa2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+    <h2>Campus Safety Portal</h2>
+    <p>Say No to Ragging | Your Safety Matters</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#report">Report Complaint</a>
+    <a href="#track">Track Complaint</a>
+    <a href="#help">Emergency Help</a>
+</nav> 
+
+<section id="home" class="hero">
+    <h1>Ragging-Free Campus</h1>
+    <p>Your voice can make our campus safer.</p>
+    <a href="#report" class="btn">Report an Incident</a>
+</section>
+
+<section id="report" class="container">
+    <h2>Confidential Complaint Form</h2>
+
+    <label>Select Complaint Category</label>
+    <select id="category">
+        <option>Ragging</option>
+        <option>Bullying</option>
+        <option>Hostel Issue</option>
+        <option>Academic Grievance</option>
+    </select>
+
+    <label>Describe Your Complaint</label>
+    <textarea id="description" placeholder="Describe your incident..." required></textarea>
+
+    <label>
+        <input type="checkbox" id="anonymous" onchange="toggleContact()">
+        Submit Anonymously
+    </label>
+
+    <div id="contact">
+        <label>Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label>Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email">
+    </div>
+
+    <button onclick="submitComplaint()">Submit Complaint</button>
+
+    <p id="result"></p>
+</section>
+
+<section id="track" class="container">
+    <h2>Track Your Complaint</h2>
+
+    <input type="text" id="token" placeholder="Enter Complaint Token">
+
+    <button onclick="trackComplaint()">Check Status</button>
+
+    <p id="status"></p>
+</section>
+
+<section id="help" class="container">
+    <h2>Emergency Help - 24/7</h2>
+
+    <div class="help-card">
+        <h3>National Anti-Ragging Helpline</h3>
+        <p>Call immediately for ragging-related emergencies.</p>
+        <a href="tel:18001805522">Call 1800-180-5522</a>
+    </div>
+
+    <div class="help-card">
+        <h3>Campus Proctor</h3>
+        <p>Contact your campus proctor for immediate assistance.</p>
+        <p>Phone: 9508366928</p>
+        <p>Email: lpu.ragging@gmail.com</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Campus Safety Portal | Safe Campus, Better Future</p>
+</footer>
+
+<script src="cs2.js"></script>
+
+</body>
+</html>
